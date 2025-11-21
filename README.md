@@ -32,7 +32,8 @@
 - GitHub Pages：项目 Settings → Pages → Source 选择 `main` 分支 `/(root)`，稍候即可访问 `https://<你的用户名>.github.io/yinyue-modern-player/`
 
 ## 许可
-- 本项目采用 MIT License，详见 `LICENSE`
+- 本项目现采用 **PolyForm Noncommercial License 1.0.0**，仅允许非商业目的使用，完整条款见 `LICENSE` 或官方页面：https://polyformproject.org/licenses/noncommercial/1.0.0/
+- 该许可证不属于 OSI 开源定义，若需商业使用，请先联系作者以获取单独授权。
 
 ## 鸣谢与说明
 - 项目通过 MCP 工具创建与推送
