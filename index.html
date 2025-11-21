@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>现代音乐播放器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="topbar">
+      <div class="brand">YinYue</div>
+      <div class="actions">
+        <button id="themeToggle" class="btn secondary">切换主题</button>
+        <button id="dirSelect" class="btn secondary">选择存储目录</button>
+        <label class="btn">添加音频<input id="fileInput" type="file" accept="audio/*"></label>
+        <span id="dirLabel" class="dir-label"></span>
+      </div>
+    </header>
+    <main class="layout">
+      <section class="player">
+        <div class="cover">
+          <div class="cover-art"></div>
+        </div>
+        <div class="info">
+          <div id="trackTitle" class="title">未选择歌曲</div>
+          <div id="trackMeta" class="meta">—</div>
+        </div>
+        <canvas id="visualizer" class="visualizer"></canvas>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar">
+            <div id="progressFill" class="progress-fill"></div>
+            <div id="progressGlow" class="progress-glow"></div>
+          </div>
+          <div class="time">
+            <span id="currentTime">00:00</span>
+            <span id="duration">00:00</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="prev" class="btn icon">
+            <svg viewBox="0 0 24 24"><path d="M6 5v14M7 12l11 7V5z"/></svg>
+          </button>
+          <button id="rewind" class="btn icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12l8 5V7zM12 12l-8 5V7z"/></svg>
+          </button>
+          <button id="play" class="btn primary">
+            <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <button id="forward" class="btn icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12l8 5V7zM12 12l-8 5V7z" transform="scale(-1,1) translate(-24,0)"/></svg>
+          </button>
+          <button id="next" class="btn icon">
+            <svg viewBox="0 0 24 24"><path d="M18 5v14M17 12L6 19V5z"/></svg>
+          </button>
+          <div class="volume">
+            <div id="knob" class="knob">
+              <div class="knob-indicator"></div>
+              <div id="volumeValue" class="knob-value">50</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside class="playlist">
+        <div class="playlist-header">播放列表</div>
+        <ul id="playlist" class="playlist-list"></ul>
+      </aside>
+    </main>
+  </div>
+  <audio id="audio" crossorigin="anonymous"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
